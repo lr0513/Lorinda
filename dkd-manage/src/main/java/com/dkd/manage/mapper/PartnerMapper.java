@@ -2,6 +2,7 @@ package com.dkd.manage.mapper;
 
 import java.util.List;
 import com.dkd.manage.domain.Partner;
+import com.dkd.manage.domain.vo.PartnerVo;
 
 /**
  * 合作管理Mapper接口
@@ -27,6 +28,7 @@ public interface PartnerMapper
      */
     public List<Partner> selectPartnerList(Partner partner);
 
+    public List<PartnerVo> selectPartnerVoList(Partner partner);
     /**
      * 新增合作管理
      * 

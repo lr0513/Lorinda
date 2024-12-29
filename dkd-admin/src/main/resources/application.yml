@@ -7,7 +7,7 @@ ruoyi:
   # 版权年份
   copyrightYear: 2024
   # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: E:\javaweb\delivery-resources\ruoyi\uploadPath
+#  profile: E:\javaweb\delivery-resources\ruoyi\uploadPath
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数字计算 char 字符验证
@@ -127,3 +127,18 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+# 文件上传配置
+dromara:
+  x-file-storage:
+    # 文件存储配置
+    default-platform: aliyun-oss-1 # 默认使用的存储平台
+    thumbnail-suffix: ".min.jpg"  # 缩略图后缀，例如【.min.jpg】【.png】
+
+    # 阿里云 OSS 配置，支持多平台配置
+    aliyun-oss:
+      - platform: aliyun-oss-1  # 存储平台标识
+        enable-storage: true    # 启用存储
+        end-point: oss-cn-hangzhou.aliyuncs.com
+        bucket-name: web-tlias-lrr
+        domain: https://web-tlias-lrr.oss-cn-hangzhou.aliyuncs.com/ # 访问域名，注意后面以/结尾
+        base-path: dkd-images/ # 基础路径
